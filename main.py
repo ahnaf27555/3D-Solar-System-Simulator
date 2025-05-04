@@ -6,8 +6,8 @@ import numpy as np
 
 # Camera-related variables
 BOUND_RADIUS = 700
-fovY = 60  # Field of view
-GRID_LENGTH = 600  # Length of grid lines
+fovY = 60  
+GRID_LENGTH = 600  
 rand_var = 423
 
 # Camera control variables
@@ -251,7 +251,7 @@ class Player:
         
         glPopMatrix()
 
-# Initialize planets (existing code remains the same)
+
 #Massive central stars (stationary)
 star1 = Planet(120, 100, 100, (0.9, 0.8, 0.1), (0, 0, 0), 0, 0, (0, 0, 0))
 Planet.planets.append(star1)
@@ -441,7 +441,7 @@ def menuKeyboard(key, x, y):
         elif key == b'\x1b':  # ESC to quit
             glutLeaveMainLoop()
 
-# Add this function to reset the game state
+
 def reset_game():
     global score, lives, game_over, Enemy, Missile, Bullet, player
     
@@ -507,7 +507,7 @@ def draw_menu():
             for c in option:
                 glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, ord(c))
     
-    # Draw controls info
+
     controls = [
         "CONTROLS:",
         "WASD - Move",
